@@ -8,7 +8,6 @@ const healthyEvent = () => {
   } else {
     myTamagotchi.full += 10;
   }
-  console.error(myTamagotchi.full);
   // eslint-disable-next-line no-use-before-define
   eatingFunction();
 };
@@ -20,7 +19,6 @@ const junkEvent = () => {
   } else {
     myTamagotchi.full = 0;
   }
-  console.error(myTamagotchi.full);
   // eslint-disable-next-line no-use-before-define
   eatingFunction();
 };
