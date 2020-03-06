@@ -1,6 +1,6 @@
 const tamagotchi = {
   name: 'tamagotchi',
-  health: 100,
+  full: 100,
 };
 
 const getTamagotchi = () => tamagotchi;
