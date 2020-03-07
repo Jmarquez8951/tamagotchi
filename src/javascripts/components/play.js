@@ -2,7 +2,7 @@ import util from '../helpers/util';
 import tamagotchiData from '../helpers/data/tamagotchiData';
 
 const superFunEvent = () => {
-  const myTamagotchi = tamagotchiData.getTamagotchi();
+  const myTamagotchi = tamagotchiData.getFunScore();
   if (myTamagotchi.fun >= 50) {
     myTamagotchi.fun = 100;
   } else {
@@ -13,7 +13,7 @@ const superFunEvent = () => {
 };
 
 const funEvent = () => {
-  const myTamagotchi = tamagotchiData.getTamagotchi();
+  const myTamagotchi = tamagotchiData.getFunScore();
   if (myTamagotchi.fun >= 98) {
     myTamagotchi.fun = 100;
   } else {
@@ -29,9 +29,12 @@ const playEvents = () => {
 };
 
 const playFunction = () => {
-  const myTamagotchi = tamagotchiData.getTamagotchi();
+  const myTamagotchi = tamagotchiData.getFunScore();
+  const myTamagotchiName = tamagotchiData.getName();
+
   let domString = '';
   domString += '<div>';
+  domString += `<p>${myTamagotchiName.name}</p>`;
   domString += `<p>Fun: ${myTamagotchi.fun}</p>`;
   domString += '<button id="super-fun-button">Skydiving</button>';
   domString += '<button id="fun-button">Walking</button>';

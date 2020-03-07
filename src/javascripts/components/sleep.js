@@ -2,7 +2,7 @@ import util from '../helpers/util';
 import tamagotchi from '../helpers/data/tamagotchiData';
 
 const napEvent = () => {
-  const myTamagotchi = tamagotchi.getTamagotchi();
+  const myTamagotchi = tamagotchi.getEnergyScore();
   if (myTamagotchi.energy >= 50) {
     myTamagotchi.energy = 100;
   } else {
@@ -13,7 +13,7 @@ const napEvent = () => {
 };
 
 const slumberEvent = () => {
-  const myTamagotchi = tamagotchi.getTamagotchi();
+  const myTamagotchi = tamagotchi.getEnergyScore();
   if (myTamagotchi.energy >= 40) {
     myTamagotchi.energy = 100;
   } else {
@@ -29,9 +29,12 @@ const sleepEvents = () => {
 };
 
 const sleepFunction = () => {
-  const myTamagotchi = tamagotchi.getTamagotchi();
+  const myTamagotchi = tamagotchi.getEnergyScore();
+  const myTamagotchiName = tamagotchi.getName();
+
   let domString = '';
   domString += '<div>';
+  domString += `<p>${myTamagotchiName.name}</p>`;
   domString += `<p>Energy: ${myTamagotchi.energy}</p>`;
   domString += '<button id="quick-nap">Nap</button>';
   domString += '<button id="deep-slumber">Deep Slumber</button>';

@@ -2,7 +2,7 @@ import util from '../helpers/util';
 import tamagotchi from '../helpers/data/tamagotchiData';
 
 const runAway = () => {
-  const myTamagotchi = tamagotchi.getTamagotchi();
+  const myTamagotchi = tamagotchi.getStrengthScore();
   if (myTamagotchi.strength >= 99) {
     myTamagotchi.strength = 100;
   } else {
@@ -13,7 +13,7 @@ const runAway = () => {
 };
 
 const fightButton = () => {
-  const myTamagotchi = tamagotchi.getTamagotchi();
+  const myTamagotchi = tamagotchi.getStrengthScore();
   if (myTamagotchi.strength <= 10) {
     myTamagotchi.strength = 0;
   } else {
@@ -29,9 +29,12 @@ const fightEvents = () => {
 };
 
 const fightFunction = () => {
-  const myTamagotchi = tamagotchi.getTamagotchi();
+  const myTamagotchi = tamagotchi.getStrengthScore();
+  const myTamagotchiName = tamagotchi.getName();
+
   let domString = '';
   domString += '<div>';
+  domString += `<p>${myTamagotchiName.name}</p>`;
   domString += `<p>Strength: ${myTamagotchi.strength}</p>`;
   domString += '<button id="run-away">Bravely Runaway</button>';
   domString += '<button id="fight-button">Commit Violence</button>';
