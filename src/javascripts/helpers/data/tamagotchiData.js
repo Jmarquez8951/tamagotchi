@@ -1,6 +1,7 @@
 const tamagotchi = {
-  name: 'tamagotchi',
+  name: 'Jimmy',
   full: 100,
+  fun: 50,
 };
 
 const getTamagotchi = () => tamagotchi;
