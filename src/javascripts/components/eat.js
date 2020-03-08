@@ -1,8 +1,9 @@
 import util from '../helpers/util';
 import tamagotchiData from '../helpers/data/tamagotchiData';
 
+
 const healthyEvent = () => {
-  const myTamagotchi = tamagotchiData.getTamagotchi();
+  const myTamagotchi = tamagotchiData.getEatScore();
   if (myTamagotchi.full >= 90) {
     myTamagotchi.full = 100;
   } else {
@@ -12,8 +13,9 @@ const healthyEvent = () => {
   eatingFunction();
 };
 
+
 const junkEvent = () => {
-  const myTamagotchi = tamagotchiData.getTamagotchi();
+  const myTamagotchi = tamagotchiData.getEatScore();
   if (myTamagotchi.full >= 3) {
     myTamagotchi.full -= 3;
   } else {
@@ -29,11 +31,13 @@ const foodEvents = () => {
 };
 
 const eatingFunction = () => {
-  const myTamagotchi = tamagotchiData.getTamagotchi();
+  const myTamagotchi = tamagotchiData.getEatScore();
+  const myTamagotchiName = tamagotchiData.getName();
+
   let domString = '';
   domString += '<div>';
+  domString += `<p>Name: ${myTamagotchiName.name}</p>`;
   domString += `<p>Fullness: ${myTamagotchi.full}</p>`;
-  domString += `<p>Name: ${myTamagotchi.name}</p>`;
   domString += '<button id="healthy-button">Healthy Food</button>';
   domString += '<button id="junk-button">Junk Food</button>';
   domString += '</div>';
