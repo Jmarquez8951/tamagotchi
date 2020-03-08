@@ -34,7 +34,7 @@ const sleepFunction = () => {
 
   let domString = '';
   domString += '<div>';
-  domString += `<p>${myTamagotchiName.name}</p>`;
+  domString += `<p>Name: ${myTamagotchiName.name}</p>`;
   domString += `<p>Energy: ${myTamagotchi.energy}</p>`;
   domString += '<button id="quick-nap">Nap</button>';
   domString += '<button id="deep-slumber">Deep Slumber</button>';

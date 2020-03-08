@@ -34,7 +34,7 @@ const playFunction = () => {
 
   let domString = '';
   domString += '<div>';
-  domString += `<p>${myTamagotchiName.name}</p>`;
+  domString += `<p>Name: ${myTamagotchiName.name}</p>`;
   domString += `<p>Fun: ${myTamagotchi.fun}</p>`;
   domString += '<button id="super-fun-button">Skydiving</button>';
   domString += '<button id="fun-button">Walking</button>';

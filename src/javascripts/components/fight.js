@@ -34,7 +34,7 @@ const fightFunction = () => {
 
   let domString = '';
   domString += '<div>';
-  domString += `<p>${myTamagotchiName.name}</p>`;
+  domString += `<p>Name: ${myTamagotchiName.name}</p>`;
   domString += `<p>Strength: ${myTamagotchi.strength}</p>`;
   domString += '<button id="run-away">Bravely Runaway</button>';
   domString += '<button id="fight-button">Commit Violence</button>';
