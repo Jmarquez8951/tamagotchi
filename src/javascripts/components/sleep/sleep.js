@@ -1,5 +1,5 @@
-import util from '../helpers/util';
-import tamagotchi from '../helpers/data/tamagotchiData';
+import util from '../../helpers/util';
+import tamagotchi from '../../helpers/data/tamagotchiData';
 
 const napEvent = () => {
   const myTamagotchi = tamagotchi.getEnergyScore();
