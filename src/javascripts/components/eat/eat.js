@@ -1,5 +1,5 @@
-import util from '../helpers/util';
-import tamagotchiData from '../helpers/data/tamagotchiData';
+import util from '../../helpers/util';
+import tamagotchiData from '../../helpers/data/tamagotchiData';
 
 
 const healthyEvent = () => {

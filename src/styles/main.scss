@@ -1,5 +1,17 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import '../javascripts/components/eat/eat.scss';
+@import '../javascripts/components/fight/fight.scss';
+@import '../javascripts/components/play/play.scss';
+@import '../javascripts/components/sleep/sleep.scss';
 
 body {
   background-color: blue;
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
